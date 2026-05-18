@@ -1,186 +1,625 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
+<link rel="icon" type="image/png" href="imagens/logo.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 Internet Fibra - Oferta Relâmpago</title>
+
+<title>Internet Fibra em São Paulo (Instalação Rápida) | Vivo, Claro, TIM e GIGA+</title>
+
+<meta name="description" content="Internet fibra em São Paulo com instalação em até 24 horas. Planos Vivo, Claro, TIM e GIGA+ com WhatsApp direto. Consulte disponibilidade no seu endereço agora."><link rel="canonical" href="https://SEUDOMINIO.com.br/">  
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="KingNet">
 
 <style>
-body{margin:0;font-family:Arial;background:#07070c;color:#fff}
 
-header{
-background:linear-gradient(135deg,#6a00f4,#ff006a);
-padding:25px 15px;
-text-align:center
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
 }
 
-h1{margin:0;font-size:22px}
-.sub{font-size:13px;opacity:.85;margin-top:5px}
+header {
+  background:
+    linear-gradient(rgba(3, 27, 52, 0.88), rgba(7, 41, 77, 0.92)),
+    url('imagens/tech-background.png');
 
-.alert{
-background:red;
-text-align:center;
-padding:8px;
-font-size:12px;
-font-weight:bold;
-animation:blink 1s infinite
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  animation: moveBackground 50s ease infinite;
 }
 
-@keyframes blink{50%{opacity:.5}}
 
-.container{max-width:850px;margin:auto;padding:12px}
-
-.brand{
-color:#ffcc00;
-font-size:16px;
-font-weight:bold;
-margin:20px 0 8px
+header::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0,153,255,0.1) 0%, transparent 70%);
+  bottom: -400px;
+  left: -300px;
 }
 
-.card{
-background:#141421;
-border:1px solid #2a2a2a;
-padding:12px;
-margin:8px 0;
-border-radius:12px
+.banner-content {
+  position: relative;
+  z-index: 2;
 }
 
-.price{
-color:#00ff9d;
-font-size:19px;
-font-weight:bold
+.logo {
+  width: 420px;
+  max-width: 95%;
+  margin-bottom: 20px;
 }
 
-.desc{
-font-size:12px;
-opacity:.75;
-margin-top:4px
+h1 {
+  font-size: 60px;
+  margin: 0;
 }
 
-.btn{
-display:block;
-background:#25d366;
-color:#fff;
-text-align:center;
-padding:12px;
-border-radius:10px;
-margin-top:10px;
-text-decoration:none;
-font-weight:bold
+.highlight {
+  color: #19a7ff;
 }
 
-.btn:hover{background:#1ebe5d}
-
-.sticky{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:#111;
-padding:12px;
-text-align:center;
-border-top:1px solid #333
+.subtitle {
+  font-size: 28px;
 }
 
-.sticky a{
-background:#25d366;
-color:#fff;
-padding:12px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block
+.description {
+  font-size: 18px;
 }
 
-.whats{
-position:fixed;
-bottom:70px;
-right:15px;
-background:#25d366;
-color:#fff;
-padding:14px 16px;
-border-radius:50px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,.4)
+.providers {
+  margin-top: 20px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  display: inline-flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
 }
 
-.footer{text-align:center;font-size:11px;opacity:.6;padding:20px}
+.provider {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.tim { color: #003399; }
+.claro { color: red; }
+.vivo { color: purple; }
+.giga { color: #0aa; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.operadora {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  box-shadow:
+    0 0 12px rgba(0,153,255,0.12),
+    0 2px 8px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.operadora:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 18px rgba(0,153,255,0.25),
+    0 6px 18px rgba(0,0,0,0.12);
+}
+/* VIVO */
+.vivo-card {
+  border: 1px solid purple;
+  box-shadow: 0 0 20px rgba(128,0,255,0.6);
+}
+
+/* CLARO */
+.claro-card {
+  border: 1px solid red;
+  box-shadow: 0 0 20px rgba(255,0,0,0.6);
+}
+
+/* TIM */
+.tim-card {
+  border: 1px solid blue;
+  box-shadow: 0 0 20px rgba(0,0,255,0.6);
+}
+
+/* GIGA */
+.giga-card {
+  border: 1px solid cyan;
+  box-shadow: 0 0 20px rgba(0,255,255,0.6);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 18px rgba(0,153,255,0.25);
+}
+
+.price {
+  font-weight: bold;
+  color: #007bff;
+}
+
+button {
+  background: linear-gradient(90deg, #25d366, #1ebe5d);
+  border: none;
+  padding: 12px;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(37,211,102,0.35);
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 22px rgba(37,211,102,0.75);
+}
+.whatsapp {
+  padding: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 75px;
+  height: 75px;
+
+  background: #25d366;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  animation: pulse 1.5s infinite;
+
+  box-shadow: 0 0 25px rgba(37,211,102,0.7);
+
+  z-index: 999;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(37,211,102,0.5);
+  }
+
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 25px rgba(37,211,102,0.9);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(37,211,102,0.5);
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+
+
+
+/* 🔥 OTIMIZAÇÃO MOBILE */
+
+@media(max-width:768px) {
+
+  .operadora h2 img {
+    width: 95px;
+  }
+
+  .whatsapp {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo {
+    width: 260px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .provider {
+    font-size: 22px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .providers {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  header {
+    animation: none;
+  }
+
+  .operadora,
+  .card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+}
 </style>
 </head>
 
 <body>
 
-<div class="alert">⚠ OFERTA LIMITADA HOJE - INSTALAÇÃO SUJEITA À DISPONIBILIDADE</div>
-
 <header>
-<h1>🔥 INTERNET ULTRARRÁPIDA + BENEFÍCIOS EXCLUSIVOS</h1>
-<div class="sub">Planos com Wi-Fi 6 • Aprovação rápida • Atendimento imediato</div>
+  <div class="banner-content">
+    <img src="imagens/logo.png" class="logo" alt="KingNet Internet Fibra">
+
+    <h1>Internet Fibra em São Paulo</h1>
+
+    <p class="subtitle">Instalação rápida em até 24 horas</p>
+
+    <p class="description">
+      Planos Vivo, Claro, TIM e GIGA+ com atendimento imediato no WhatsApp
+    </p>
+
+    <!-- 👇 AQUI -->
+    <div class="providers">
+      <span class="provider vivo">Vivo</span>
+      <span class="provider claro">Claro</span>
+      <span class="provider tim">TIM</span>
+      <span class="provider giga">GIGA+</span>
+    </div>
+
+  </div>
 </header>
 
-<div class="container">
+<!-- AQUI COMEÇA OS PLANOS -->
+<div class="grid">
+<!-- VIVO -->
+<div class="operadora vivo-card">
+<h2>
+<img src="imagens/vivo.png" alt="Plano de internet fibra Vivo em São Paulo" width="130" style="vertical-align:middle; margin-right:8px;"> Vivo</h2>
 
-<div class="brand">🔥 MAIS ESCOLHIDO</div>
+<h3>📱 Internet + Móvel</h3>
 
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20300%20Mega%20+%2020GB">
+  <div class="card">300 Mega + 20GB <div class="price">R$ 130,00</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20+%2050GB">
+  <div class="card">500 Mega + 50GB <div class="price">R$ 160,00</div></div>
+</a>
+
+<h3>🌐 Só Internet</h3>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20700%20Mega">
+  <div class="card">700 Mega <div class="price">R$ 150,00</div></div>
+</a>
+
+<h3>🎬 Internet + Streaming</h3>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20600%20Mega%20+%20Prime%20Video">
+  <div class="card">600 Mega + Prime Video <div class="price">R$ 100,00</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20+%20Netflix">
+  <div class="card">500 Mega + Netflix <div class="price">R$ 144,90</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20+%20Globoplay">
+  <div class="card">
+    ⭐ 500 Mega + Globoplay (MAIS VENDIDO)
+    <div class="price">R$ 127,90</div>
+  </div>
+</a>
+
+<h3>📺 Internet + TV (Streaming)</h3>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20+%20TV%20App">
+  <div class="card">500 Mega + TV App <div class="price">R$ 150,00</div></div>
+</a>
+
+
+<h3>📺 Internet + TV (Via Cabo)</h3>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20+%20TV">
+  <div class="card">500 Mega + TV 120 canais <div class="price">R$ 270,00</div></div>
+</a>
+<h3>🏢 Empresas MEI/CNPJ</h3>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20400%20Mega%20CNPJ">
+  <div class="card">400 Mega <div class="price">R$ 79,99</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20CNPJ">
+  <div class="card">500 Mega <div class="price">R$ 89,99</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20600%20Mega%20CNPJ">
+  <div class="card">600 Mega <div class="price">R$ 94,99</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20700%20Mega%20CNPJ">
+  <div class="card">700 Mega <div class="price">R$ 99,99</div></div>
+</a>
+
+<h3>📺 Internet + TV (Empresas)</h3>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20+%20TV%20Avançado">
+  <div class="card">500 Mega + TV Avançado <div class="price">R$ 244,80</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Vivo%20500%20Mega%20+%20TV%20Completa">
+  <div class="card">500 Mega + TV Completa <div class="price">R$ 384,98</div></div>
+</a>
+
+<p>📶 Modem Wi-Fi 6 incluso</p>
+
+<a href="https://wa.me/5511952504631?text=Quero%20contratar%20um%20plano%20da%20Vivo">
+<button>Falar no WhatsApp e contratar agora</button>
+</a>
+</div>
+<!-- CLARO -->
+<div class="operadora claro-card">
+<h2>
+<img src="imagens/claro.png" alt="Internet Claro Fibra" width="130" style="vertical-align:middle; margin-right:8px;"> Claro</h2>
+<!-- ANTIGOS -->
+<h3>📱 Internet + Móvel</h3>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20350%20Mega%20+%2030GB">
+  <div class="card">350 Mega + 30GB <div class="price">R$ 114,80</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20600%20Mega%20+%2070GB">
+  <div class="card">600 Mega + 70GB <div class="price">R$ 159,80</div></div>
+</a>
+<h3>🌐 Só Internet</h3>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20350%20Mega%20Wi-Fi%20+%20Globoplay">
+  <div class="card">350 Mega + Globoplay <div class="price">R$ 89,90</div></div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20600%20Mega%20Wi-Fi%20+%20Globoplay">
 <div class="card">
-<div class="price">500 a 700 MEGA - a partir de R$ 89,90</div>
-<div class="desc">Alta estabilidade + ideal para casa toda conectada</div>
-<a class="btn" href="https://wa.me/5511952504631?text=Quero%20internet%20mais%20vendida">QUERO CONSULTAR</a>
+  ⭐ 600 Mega + Globoplay (MAIS VENDIDO)
+  <div class="price">R$ 99,90</div>
+</div>
+</a>
+
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20750%20Mega%20Wi-Fi%20+%20Globoplay">
+  <div class="card">750 Mega + Globoplay <div class="price">R$ 149,90</div></div>
+</a>
+<!-- NOVOS -->
+<h3>🏢 Empresas (MEI/CNPJ)</h3>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20400%20Mega%20Empresas">
+<div class="card">400 Mega <div class="price">R$ 79,90</div></div>
+</a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20600%20Mega%20Empresas">
+<div class="card">600 Mega <div class="price">R$ 59,90 (3 meses) <br> Após: R$ 99,90</div></div>
+</a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20800%20Mega%20Empresas">
+<div class="card">800 Mega <div class="price">R$ 109,90</div></div>
+</a>
+
+<h3>📱 Internet + Móvel (Empresas)</h3>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20600%20Mega%20+%2041GB">
+<div class="card">600 Mega + 41GB + Site <div class="price">R$ 131,12</div></div>
+</a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20800%20Mega%20+%2041GB">
+<div class="card">800 Mega + 41GB + Microsoft <div class="price">R$ 181,90</div></div>
+</a>
+
+<h3>📺 Internet + TV (Empresas)</h3><a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20600%20Mega%20+%20TV%20Corp%204K">
+<div class="card">600 Mega + TV Corp 4K <div class="price">R$ 234,80</div></div>
+</a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20Claro%20600%20Mega%20+%20TV%20Compact">
+<div class="card">600 Mega + TV Compact <div class="price">R$ 174,80</div></div>
+</a>
+
+<p>📺 Globoplay incluso<br>📶 Modem Wi-Fi 6</p>
+
+<a href="https://wa.me/5511952504631?text=Quero%20contratar%20um%20plano%20da%20Claro">
+<button>Contratar internet fibra agora pelo WhatsApp</button>
+</a>
 </div>
 
-<div class="brand">TIM</div>
+<!-- TIM -->
+<div class="operadora tim-card">
+<h2>
+<img src="imagens/tim.png" alt="Plano de internet fibra TIM 700 Mega com Globoplay em São Paulo" width="130" style="vertical-align:middle; margin-right:8px;"> TIM</h2>
 
-<div class="card">
-<div class="price">400 Mega - R$ 89,90</div>
-<div class="desc">Instalação rápida + estabilidade</div>
-<a class="btn" href="https://wa.me/5511952504631?text=TIM%20400">QUERO ESSE</a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20TIM%20400%20Mega"><div class="card">400 Mega <div class="price">R$ 89,90</div></div></a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20TIM%20700%20Mega%20+%20Globoplay"><div class="card">
+  ⭐ 700 Mega + Globoplay (MAIS VENDIDO)
+  <div class="price">R$ 109,90</div>
+</div></a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20TIM%201%20Giga"><div class="card">1 Giga <div class="price">R$ 129,90</div></div></a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20TIM%202%20Giga"><div class="card">2 Giga <div class="price">R$ 364,90</div></div></a>
+
+<a href="https://wa.me/5511952504631?text=Quero%20contratar%20um%20plano%20da%20TIM">
+<button>Contratar internet fibra TIM agora</button>
+</a>
 </div>
 
-<div class="card">
-<div class="price">700 Mega + Globoplay - R$ 109,90</div>
-<div class="desc">Streaming + jogos sem travar</div>
-<a class="btn" href="https://wa.me/5511952504631?text=TIM%20700">QUERO ESSE</a>
-</div>
+<!-- GIGA -->
+<div class="operadora giga-card">
+<h2>
+<img src="imagens/giga.png" alt="Plano de internet fibra GIGA+ 800 Mega em São Paulo" width="130" style="vertical-align:middle; margin-right:8px;"> GIGA+</h2>
 
-<div class="brand">CLARO</div>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20GIGA%20600%20Mega"><div class="card">600 Mega <div class="price">R$ 99,99</div></div></a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20GIGA%20800%20Mega"><div class="card">
+  ⭐ 800 Mega (MAIS VENDIDO)
+  <div class="price">R$ 109,99</div>
+</div></a>
+<a class="card-link" href="https://wa.me/5511952504631?text=Quero%20GIGA%20920%20Mega"><div class="card">920 Mega <div class="price">R$ 139,99</div></div></a>
 
-<div class="card">
-<div class="price">350 Mega - R$ 89,90</div>
-<div class="desc">Internet estável para toda casa</div>
-<a class="btn" href="https://wa.me/5511952504631?text=CLARO%20350">QUERO ESSE</a>
-</div>
-
-<div class="card">
-<div class="price">600 Mega + Globoplay - R$ 99,90</div>
-<div class="desc">Mais velocidade + entretenimento</div>
-<a class="btn" href="https://wa.me/5511952504631?text=CLARO%20600">QUERO ESSE</a>
-</div>
-
-<div class="brand">VIVO</div>
-
-<div class="card">
-<div class="price">500 Mega + 50GB - R$ 160</div>
-<div class="desc">Internet + bônus móvel incluso</div>
-<a class="btn" href="https://wa.me/5511952504631?text=VIVO%20500">QUERO ESSE</a>
-</div>
-
-<div class="brand">🔥 ÚLTIMAS VAGAS</div>
-
-<div class="card">
-<div class="price">800 Mega GIGA+ - R$ 109,99</div>
-<div class="desc">Alta performance residencial</div>
-<a class="btn" href="https://wa.me/5511952504631?text=GIGA%20800">QUERO ESSE</a>
+<a href="https://wa.me/5511952504631?text=Quero%20contratar%20um%20plano%20da%20GIGA">
+<button>Contratar internet fibra GIGA+ agora</button>
+</a>
 </div>
 
 </div>
 
-<div class="sticky">
-<a href="https://wa.me/5511952504631?text=Quero%20internet%20agora">💬 FALAR NO WHATSAPP AGORA</a>
+<a href="https://wa.me/5511952504631?text=Quero%20internet%20fibra%20em%20São%20Paulo" class="whatsapp">
+<img src="imagens/whatsapp.png" style="width:38px; max-width:60%;" alt="WhatsApp">
+</a>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.card-link').forEach(link => {
+    link.setAttribute('target', '_blank');
+  });
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.cursor = "pointer";
+  });
+});
+</script>
+
+<div style="max-width:800px; margin:40px auto; font-size:15px; color:#555; line-height:1.6;">
+
+<h2>Internet Fibra em São Paulo</h2>
+
+<p>
+Contrate internet fibra em São Paulo com instalação rápida e atendimento via WhatsApp.
+Trabalhamos com planos residenciais e empresariais das principais operadoras.
+</p>
+
+<h3>Atendimento em toda a cidade de São Paulo</h3>
+
+<p>
+Atendemos toda a cidade de São Paulo, incluindo Zona Leste, Zona Norte, Zona Sul e Zona Oeste.
+Se você procura internet fibra em São Paulo com instalação rápida, planos baratos e suporte via WhatsApp, aqui você encontra as melhores opções.
+</p>
+
+<p>
+Disponibilidade em bairros como Itaquera, Tatuapé, Penha, Mooca, Vila Prudente, Santo Amaro, Capão Redondo, Lapa, Pinheiros, Butantã, Santana, Tucuruvi e toda a região.
+</p>
+
+<p>
+Consulte agora a disponibilidade da internet fibra no seu endereço e contrate com instalação rápida e atendimento imediato.
+</p>
+
+<div style="padding:30px; max-width:900px; margin:auto;">
+
+  <h2>Perguntas frequentes sobre internet fibra em São Paulo</h2>
+
+  <p><strong>Qual a melhor internet fibra em São Paulo?</strong><br>
+  Trabalhamos com Vivo, Claro, TIM e GIGA+, oferecendo as melhores opções.</p>
+
+  <p><strong>A instalação é rápida?</strong><br>
+  Sim, instalação em até 24 horas.</p>
+
+  <p><strong>Tem plano para empresas?</strong><br>
+  Sim, temos planos empresariais para MEI e CNPJ.</p>
+
 </div>
 
-<a class="whats" href="https://wa.me/5511952504631?text=Quero%20internet%20agora">💬</a>
+<div style="text-align:center; padding:20px; font-size:18px;">
+📍 Rua das Nemesias, 493 - São Paulo - SP
+</div>
 
-<div class="footer">Atendimento imediato via WhatsApp • Sujeito à análise de disponibilidade</div>
+</div> <!-- ✅ FECHA O DIV PRINCIPAL -->
+
+<footer style="
+  text-align:center;
+  padding:25px 15px;
+  background:#031b34;
+  color:white;
+  margin-top:30px;
+  font-size:16px;
+  line-height:1.8;
+">
+  <div>⭐ 32 avaliações 5 estrelas no Google</div>
+  <div>KingNet © 2026 | WhatsApp: (11) 95250-4631</div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TelecommunicationsService",
+ "name": "KingNet Internet Fibra",
+ "url": "https://seudominio.com.br",
+ "image": "https://seudominio.com.br/imagens/logo.png",
+ "telephone": "+5511952504631",
+ "areaServed": {
+   "@type": "State",
+   "name": "São Paulo"
+ },
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "São Paulo",
+   "addressRegion": "SP",
+   "addressCountry": "BR"
+ }
+}
+</script>
 
 </body>
 </html>
